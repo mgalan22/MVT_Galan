@@ -23,6 +23,6 @@ from familia.views import crear_familia
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ver/', ver_familia),
-    path('crea/',crear_familia),
+    path('ver/', ver_familia),      #muestra la lista de elementos de la BD
+    path('crea/',crear_familia),  #agrega los 3 elementos de la vista a la BD y muestra confirmación
 ]

@@ -2,13 +2,13 @@ from django.shortcuts import render
 
 from familia.models import Familiares
 
-# Create your views here.
+# Muestra toda la tabla de personas de la BD
 def ver_familia(request):
-    
     personas=Familiares.objects.all()
     return render(request, "template_flia.html",{"personas":personas})
 
 
+#Crea en la BD las 3 personas con sus datos
 def crear_familia(request):
     persona1=Familiares.objects.create(nombre="Marcelo", hijos=3 ,fecha_nac='1985-01-25')
     persona2=Familiares.objects.create(nombre="Guadalupe", hijos=0 ,fecha_nac='1970-12-10')
